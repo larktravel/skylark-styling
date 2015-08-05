@@ -14,7 +14,7 @@
     "tests"
   ],
   "main": [
-    "sass/lark.sass",
+    "sass/lark.sass"
   ],
   "repository": {
     "type": "git",
