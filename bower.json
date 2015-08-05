@@ -21,6 +21,6 @@
     "url": "git://github.com/larktravel/skylark-styling.git"
   },
   "dependencies": {
-    "bootstrap-sass": "~3.3.5"
+    "bootstrap-sass-official": "~3.3.3"
   }
 }
