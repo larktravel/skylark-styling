@@ -1,0 +1,269 @@
+.calendar-container {
+  display: inline-block;
+}
+
+.lark-calendar {
+  background: $white;
+  z-index: 999;
+  position: absolute;
+  width: 452px;
+  display: none;
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  border-radius: 0 0 3px 3px;
+  border: 1px solid $medium-gray;
+  box-shadow: 0px 0px 3px rgba($black, 0.18), 0px 0px 0px rgba($black, 0.1);
+  text-align: center;
+  color: $text-black;
+  text-shadow: none;
+
+  .months-container {
+    table:first-child {
+      margin-left: 0px;
+    }
+
+    table:last-child {
+      margin-right: 0px;
+    }
+  }
+}
+
+.lark-calendar .calendar-navigation {
+  position: absolute;
+  top: 9px;
+  right: 5px;
+  left: 5px;
+  display: block;
+  padding: 0 0 6px;
+  list-style-type: none;
+  font-weight: bold;
+
+  li {
+    display: none;
+
+    &:first-child {
+      display: block;
+      float: left;
+    }
+
+    &:last-child {
+      display: block;
+      float: right;
+    }
+
+    a.calendar-navigate {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      text-decoration: none;
+
+      &.previous, &.next {
+        background: $white;
+        color: rgba($lark-purple, 0.6);
+
+        &:hover {
+          color: $lark-purple;
+        }
+
+        &:active{}
+      }
+
+      &.previous {}
+      &.next {}
+      &.disabled{
+        &, &:hover, &:active{
+          background: $white;
+          cursor: default;
+          color: $border-color;
+        }
+      }
+      &.today{
+        &:hover{}
+        &:active{}
+      }
+    }
+  }
+}
+
+.lark-calendar table {
+  // background: $lightest-gray;
+  display: inline-block;
+  margin: 10px 2px 0;
+  border-collapse: collapse;
+  font-size: 12px;
+  font-weight: 600;
+
+  caption {
+    /* month names */
+    color: $text-black;
+    font-size: 15px;
+    font-weight:600;
+    text-transform: uppercase;
+    text-align: center;
+  }
+
+  thead th, tbody td {
+    /* cell sizes */
+    width: 31px;
+    height: 31px;
+    text-align:center;
+    color: $text-black;
+    line-height: 31px;
+    border: 1px solid $white;
+  }
+
+  tbody td{
+    background: $lightest-gray;
+  }
+
+  thead {
+    /* weekday letters */
+    background: $white;
+    border-bottom: 1px solid $border-color;
+    font-size: 10px;
+
+    th {
+      color: $medium-gray;
+      font-weight: 600;
+    }
+  }
+
+  tbody {
+    // background: $white;
+    // background: $pale-gray;
+
+    td {
+      cursor: pointer;
+      & > span{
+        position: relative;
+        width: 100%;
+      }
+
+      &.selected, &.stuck {
+        // date(s) within range once selection is locked
+        background-color: rgba($lark-purple,0.6);
+        color: $white;
+
+        &.startrange span{
+          background-color: rgba($lark-purple,1);
+
+          &:before {
+            background-color: rgba($lark-purple,1);
+            top:0px;
+            bottom:0px;
+            right:0px;
+            left:0px;
+          }
+
+          &:after {
+            content: "";
+            z-index: 2;
+            position: absolute;
+            right: -6px;
+            width: 0;
+            height: 0;
+            border-top: 16px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-left: 6px solid $lark-purple;
+          }
+        }
+
+        &.endrange span{
+          background-color: rgba($lark-purple,1);
+
+          &:after {
+            content: "";
+            position: absolute;
+            left: -6px;
+            width: 0;
+            height: 0;
+            border-top: 16px solid transparent;
+            border-bottom: 15px solid transparent;
+            border-right: 6px solid $lark-purple;
+          }
+        }
+      }
+
+      &.selectable:hover {
+        // hovering over unselected date (when there is no stuck date)
+        background-color: $lark-purple;
+        color: white;
+      }
+
+      &.selected:hover, &.stuck:hover {
+        // hovering over date within selected range (including while selecting range)
+        background-color: $lark-purple;
+        color: white;
+      }
+
+      &.today {
+        // @include box-shadow(0 0 0 1px $lark-purple inset);
+        color: $lark-purple !important;
+      }
+
+      &.today_selected {
+        background-color: $lark-purple;
+      }
+
+      &.today_stuck {
+        background-color: $lark-purple;
+      }
+
+      &.beyond {
+        background-image: none;
+        background-color: $lightest-gray;
+        color: $border-color;
+        opacity: 0;
+        border:none;
+      }
+
+      &.beyond_selected {
+        background-color: rgba($lark-purple,0.50);
+      }
+
+      &.beyond_stuck {
+        background-color: $medium-gray;
+      }
+
+      &.unselectable {
+        cursor: not-allowed;
+        color: $border-color;
+      }
+    }
+  }
+}
+
+.lark-calendar span.clear {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  display: none;
+  color: transparent;
+
+  span {
+    background: red;
+    cursor: pointer;
+    position: relative;
+    top: -18px;
+    left: -18px;
+    width: 30px;
+    height: 30px;
+    display: none;
+    color: $white;
+    border: 1px solid $white;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 23px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    -o-transform: rotate(-45deg);
+
+    &.active {
+      border: 1px solid $caution-yellow;
+    }
+  }
+}

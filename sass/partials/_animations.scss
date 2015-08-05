@@ -1,0 +1,129 @@
+// fix translate3d bug in IE
+@mixin translate3dIE($x, $y, $z) {
+  -webkit-transform: translate3d($x, $y, $z);
+      -ms-transform: translate($x, $y); // add normal translate for IE9
+          transform: translate3d($x, $y, $z);
+}
+
+@mixin keyframes( $animationName ) {
+  @-webkit-keyframes $animationName {
+      @content;
+  }
+  @-moz-keyframes $animationName {
+      @content;
+  }
+  @-o-keyframes $animationName {
+      @content;
+  }
+  @keyframes $animationName {
+      @content;
+  }
+}
+
+@mixin cubic {
+  -webkit-timing-function: cubic-bezier(.58,0,.74,.72);
+  timing-function: cubic-bezier(.58,0,.74,.72);
+}
+
+@mixin linear($property, $duration) {
+  @include transition($property $duration cubic-bezier(0, 0, 1, 1));
+  -moz-transition: $property $duration cubic-bezier(0, 0, 1, 1);
+}
+
+@mixin ease($property, $duration) {
+  @include transition($property $duration cubic-bezier(0.42, 0, 0.58, 1));
+  -moz-transition: $property $duration cubic-bezier(.58,0,.74,.72);
+}
+
+@mixin sidebar-transition {
+  // transition: transform $sidebar-slide-duration cubic-bezier(.58,0,.74,.72);
+  // -webkit-transition: -webkit-transform $sidebar-slide-duration cubic-bezier(.58,0,.74,.72);
+  // -moz-transition: transform $sidebar-slide-duration cubic-bezier(.58,0,.74,.72);
+  transition: transform $sidebar-slide-duration cubic-bezier(0.42, 0, 0.58, 1);
+  -webkit-transition: -webkit-transform $sidebar-slide-duration cubic-bezier(0.42, 0, 0.58, 1);
+  -moz-transition: transform $sidebar-slide-duration cubic-bezier(0.42, 0, 0.58, 1);
+}
+
+@include keyframes(scale-fade) {
+  from {
+    opacity: 0;
+    @include scale(.5);
+  }
+  to {
+    opacity: 1;
+    @include rotate(1);
+  }
+}
+
+@include keyframes(fadein) {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@include keyframes(fadedown) {
+  from {
+    opacity: 0;
+    @include translate3d(0,-10px,0);
+  }
+  to {
+    opacity: 1;
+    @include translate3d(0,0,0);
+  }
+}
+
+@include keyframes(slidedown) {
+  from {
+    opacity: 0;
+    @include scaleY(0);
+
+  }
+  to {
+    opacity: 1;
+    @include scaleY(1);
+  }
+}
+
+
+@include keyframes(landing-message) {
+  0% {
+    opacity: 0;
+    @include scale(.6);
+  }
+  100% {
+    opacity: 1;
+    @include scale(1);
+  }
+}
+
+@include keyframes(landing-discover) {
+  0% {
+    @include translate3d(0,-10px,0);
+  }
+  50% {
+    @include translate3d(0,0,0);
+  }
+  100% {
+    @include translate3d(0,-10px,0);
+  }
+}
+
+
+
+.fade-in.ng-enter {
+  @include ease(all, .2s);
+}
+
+.fade-in.ng-leave {
+  @include ease(all, .4s);
+}
+
+.fade-in.ng-enter,
+.fade-in.ng-leave.ng-leave-active {
+  @include opacity(0);
+}
+
+.fade-in.ng-leave,
+.fade-in.ng-enter.ng-enter-active {
+  @include opacity(1);
+}
+

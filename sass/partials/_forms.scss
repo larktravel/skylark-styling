@@ -1,0 +1,426 @@
+.form-shadow {
+  border: 1px solid rgba($black, 0.15);
+  border-bottom-color: rgba($black, .3);
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  box-shadow: 0px 0px 3px rgba($black, 0.18), 0px 0px 0px rgba($black, 0.1);
+}
+
+.form-rounded {
+  border-radius: 3px 3px 3px 3px;
+}
+
+.lark-form {
+  background: $white;
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+  color: $text-black;
+  font-weight: 300;
+  font-family: $body-font;
+
+  form {
+    margin-bottom: 0px;
+  }
+
+  .form-control {
+    background-color: transparent;
+  }
+
+  .row {
+    margin: 0px;
+    border-bottom: 1px solid $light-border-color;
+
+    &.last {
+      border-bottom: none;
+    }
+
+    & > div {
+      margin: 0px;
+      padding: 0px;
+      border-right: 1px solid $light-border-color;
+      @include box-sizing(border-box);
+
+      &:last-child {
+        border-right: none;
+      }
+
+      &.form-status-summary {
+        background-color: $pale-gray;
+        min-height: 70px;
+        display: table;
+        padding: 10px 15px;
+        border-style: solid;
+        border-width: 1px 0px 1px 0px;
+        text-align: center;
+        font-size: 18px;
+        font-weight: 500;
+        text-align: center;
+        font-family: $body-font;
+
+        &.flash {
+          @include animation(fadein .4s ease-in-out);
+          @include ease(all, $sidebar-slide-duration);
+        }
+
+        &.success {
+          color:green;
+        }
+
+        &.error {
+          color: red;
+        }
+
+        &.flash-alert {
+          background: $no-availability-bg;
+          border-color: darken($no-availability-bg, 10%);
+          color: $white;
+        }
+
+        &.flash-notice {
+          background: lighten($pos-green, 25%);
+          border-color: darken($pos-green, 25%);
+          color: darken($pos-green, 25%);
+        }
+
+        span {
+          display: table-cell;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    &.meta-information {
+      background: rgba($messaging-background, .5);
+
+      & > div {
+        padding: 15px;
+        color: $text-light-black;
+        font-size: 13px;
+        line-height: 1.5em;
+
+        a {
+          color: $text-light-black;
+          text-decoration: underline;
+
+          &:hover {
+            color: $text-black;
+          }
+        }
+      }
+    }
+  }
+
+  .control-group {
+    min-height: 70px;
+  }
+
+  .control-label {
+    &.required{
+      &:before{
+        content: "* ";
+        vertical-align: middle;
+        font-size: 12px;
+        color:red;
+      }
+    }
+  }
+
+  .date-inputs{
+    padding-left:10px;
+    padding-right:15px;
+    .form-group{
+      padding:0px;
+      select{
+        color: $text-light-black;
+        padding-left:0px;
+        padding-right:12px;
+      }
+    }
+  }
+
+  .form-group, .control-group {
+    background: $white;
+    position: relative;
+    margin-bottom: 0px;
+
+    &.transparent {
+      background: transparent;
+    }
+
+    &.group-title {
+      min-height: auto;
+      background: $messaging-background;
+    }
+
+    &.button {
+      background: transparent;
+    }
+
+    &.dim {
+      background: $pale-gray;
+    }
+
+    h1 {
+      height: 90px;
+      margin: 0px;
+      text-align: center;
+      color: $text-black;
+      font-size: 28px;
+      font-weight: 500;
+      font-family: $body-font;
+      line-height: 100px;
+      letter-spacing: 0.03em;
+    }
+
+    h2, h3{
+      margin: 0px;
+      padding: 0px 0px 0px 15px;
+      font-family: $body-font;
+      line-height: 50px;
+    }
+    h2 {
+      color: $text-black;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 70px;
+      span {
+        color: $text-gray;
+      }
+    }
+
+    label {
+      z-index: 1;
+      display: block;
+      padding: 15px 0 0 15px;
+      text-align: left;
+      color: $text-gray;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+    }
+
+    .display-content, input[type='text'], input[type='email'], input[type='tel'], input[type='date'], input[type='password'], select {
+      display: block;
+      padding-bottom: 10px;
+      padding-left: 15px;
+      border: 0px;
+      border-radius: 0px;
+      @include box-shadow(none);
+      color: $text-light-black;
+      @include placeholder($light-border-color);
+      font-size: 16px;
+      font-weight: 400;
+    }
+
+    select {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      background-image:image-url("#{$cloudfront-url}/arrowdown.gif");
+      background-repeat: no-repeat;
+      background-position: 98% 50%;
+    }
+
+    .controls.date-of-birth {
+      min-width: 200px;
+      padding-left: 4px;
+    }
+
+    input[type='checkbox'] {
+      width: inherit;
+      height: inherit;
+      margin-top: -1px;
+    }
+
+
+    &.error {
+      label, small {
+        color: $neg-red;
+      }
+    }
+
+    .error-container {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      color: red;
+
+      .glyphicons i:before{
+        top: -1px;
+        color: red;
+        font-weight: 500;
+      }
+
+      small {
+        font-size: 10px;
+        font-weight: 600;
+        font-family: $body-font;
+        letter-spacing: 0.05em;
+        text-transform: uppercase;
+      }
+    }
+  }
+
+  &.search-form {
+    overflow: visible;
+
+    .lark-calendar {
+      width: 100% !important;
+    }
+  }
+
+  &.featured-form-intro {
+    background: $lark-purple;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border: 1px solid rgba($black, 0.15);
+    border-bottom-color: rgba($black, .3);
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    box-shadow: 0px 0px 3px rgba($black, 0.18), 0px 0px 0px rgba($black, 0.1);
+    color: $white;
+
+    .row {
+      border-bottom: 0px;
+
+      & > div {
+        padding: 30px;
+
+        h2 {
+          margin: 0px 0px 20px 0px;
+          padding: 0px;
+        }
+
+        p {
+          padding: 0px 0px 15px 0px;
+          color: $text-white;
+          font-size: 15px;
+          font-weight: 600;
+          line-height: 1.3em;
+
+          a {
+            color: $white;
+            text-decoration: underline;
+          }
+
+          &:last-child {
+            margin-bottom: 0px;
+            padding-bottom: 0px;
+          }
+        }
+      }
+    }
+  }
+
+  &.password-reset {
+    max-width: 600px;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
+  &.separate-form-button .row > div {
+    padding: 15px;
+    border: 0px;
+  }
+
+  #departs_at, #returns_at {
+    cursor: pointer;
+  }
+
+  .help-block {
+    position: relative;
+    top: 8px;
+    right: 10px;
+    margin: 0px;
+    text-align: right;
+    color: $neg-red;
+    font-size: 11px;
+  }
+}
+
+.booking-form {
+  @media (max-width: $screen-sm){
+    .row {
+      border-bottom: 0;
+    }
+    .control-group {
+      border-bottom: 1px solid $light-border-color;
+    }
+  }
+}
+
+.spin {
+  i:before {
+    @include animation-name(spin);
+    @include animation-duration(3s);
+    @include animation-timing-function(linear);
+    @include animation-iteration-count(infinite);
+  }
+}
+
+@include keyframes(spin) {
+  from { @include rotate(0deg); }
+  to { @include rotate(360deg); }
+}
+
+
+
+
+@media (min-width: 768px) {
+
+  .lark-form {
+    &.search-form {
+      max-width: 500px;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 767px) {
+
+  .form-rounded {
+    border-radius: 0px;
+  }
+
+  .form-shadow, .lark-form.featured-form-intro {
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  .lark-form .form-group, .lark-form .control-group {
+    .display-content, input[type='text'], input[type='email'], input[type='tel'], input[type='date'], input[type='password'], select {
+      font-size: 14px;
+    }
+  }
+
+  .lark-form.featured-form-intro {
+    .row > div {
+      padding: 30px 15px;
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+
+  #home-page #hp_form .lark-form {
+
+    .form-group {
+      padding-right: 10px;
+      padding-left: 10px;
+
+      &.button {
+        padding-right: 0px;
+        padding-left: 0px;
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+#static-navigation {
+  height: 79px;
+  overflow-y: hidden;
+  line-height: 79px;
+  text-shadow: 0 1px 1px rgba($dim-gray,0.2);
+
+  & >.row {
+
+    & >:first-child {
+      padding-right: 50px;
+      text-align: right;
+    }
+
+    & >:last-child {
+      padding-left: 50px;
+      text-align: left;
+    }
+  }
+
+  a {
+    padding: 10px 10px 10px 16px;
+    border-radius: 3px;
+    color: $white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    @include ease(all, .25s);
+
+    &:hover {
+      background: rgba($white,.2);
+    }
+  }
+
+  .wordmark, .wordmark a {
+    margin-top: -3px;
+    border: 0px;
+
+    &:hover {
+      background: none;
+      border: none;
+    }
+  }
+}
+
+.homepage-pane {
+  position: relative;
+
+  .copy {
+    position: absolute;
+    top: 20%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    
+    h2 {
+      color: $text-black;
+    }
+  }
+}

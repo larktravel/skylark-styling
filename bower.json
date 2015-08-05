@@ -1,0 +1,26 @@
+{
+  "name": "skylark-styling",
+  "version": "0.0.1",
+  "authors": [
+    "Adam Singer <adam@artforge.com>"
+  ],
+  "description": "Skylark Shared Styling",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "main": [
+    "sass/lark.sass",
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/larktravel/skylark-styling.git"
+  },
+  "dependencies": {
+    "bootstrap-sass": "~3.3.5"
+  }
+}

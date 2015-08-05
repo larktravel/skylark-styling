@@ -1,0 +1,91 @@
+$body-font:                   "proxima-nova", arial, sans-serif;
+$body-font-spacing:           -0.01em;
+
+$serif-font:                  "museo-slab", georgia, serif;
+$serif-font-spacing:          0.03em;
+
+$lark-purple:                 #8a2ed9;
+$dark-purple:                 #0f0322;
+
+$page-background:             #F4F5F7;
+
+$black:                       #000000;
+$text-black:                  #3D3D3D;
+$text-light-black:            #5A5A5A;
+$text-gray:                   #737373;
+$medium-gray:                 #999999;
+
+$light-gray:                  #AAAAAA;
+$border-color:                #CCCCCC;
+
+$light-gray-2:                #D9D9D9;
+$text-white:                  #EEEEEE;
+$messaging-background:        #F5F5F5;
+$white:                       #FFFFFF;
+
+
+$hp_slideshow-height:         75vh;
+$slideshow-height:            85vh;
+
+$icon-font-path:              "/assets/";
+
+$sidebar-slide-duration:      .35s;
+
+$cloudfront-url:              "https://<%= Rails.application.secrets[:s3]['cloudfront_url'] %>/assets";
+
+
+
+
+
+
+
+
+
+
+
+$pale-gray:               #FAFAFA;
+$lightest-gray:           #EEEEEE;
+
+
+$dim-gray:                #424242;
+$gray:                    #666666;
+
+$dark-gray:               #2D2D2D;
+
+$lark-gray:               #737373;
+
+$light-border-color:      #DDDDDD;
+
+$border-color-dark:       #424242;
+
+$dark-blue:			          #095197;
+
+$pos-green:               #57a55c;
+$neg-red:                 #f55e4e;
+$caution-yellow:          #ffea00;
+
+$bold-weight:             600;
+
+$active-blue:             #2BAFFF;
+
+$link-blue:               #428BCA;
+
+$error-background:        #f2dede;
+$error-color:             #a94442;
+
+$no-availability-bg:      #e3545b;
+
+
+
+
+$pagination-color:                $lark-purple;
+
+$pagination-disabled-color:       $medium-gray;
+
+$pagination-hover-color:          $white;
+$pagination-hover-bg:             $lark-purple;
+$pagination-hover-border:         $lark-purple;
+
+$pagination-active-color:         $white;
+$pagination-active-bg:            $lark-purple;
+$pagination-active-border:        $lark-purple;

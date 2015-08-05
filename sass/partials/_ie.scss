@@ -1,0 +1,50 @@
+html.ie {
+
+  // when sidebar is open
+  #home-page #hp_slideshow {
+    .home-foot-sash,
+    .copy {
+      padding-right: 70px;
+      @include ease(all, $sidebar-slide-duration);
+      @include translate3dIE(-230px, 0, 0);
+    }
+  }
+
+  .carousel-caption {
+    @include ease(all, $sidebar-slide-duration);
+    @include translate3dIE(-230px, 0, 0);
+  }
+
+  .live-itinerary.fixto-fixed {
+    @include ease(all, $sidebar-slide-duration);
+    @include translate3dIE(-230px, 0, 0);
+  }
+
+
+  // when sidebar is collapsed
+  .sidebar-collapsed {
+
+    #home-page #hp_slideshow {
+      .home-foot-sash,
+      .copy {
+        @include translate3dIE(0, 0, 0);
+      }
+    }
+
+    .carousel-caption {
+      @include translate3dIE(0, 0, 0);
+    }
+
+    .live-itinerary.fixto-fixed {
+      @include translate3dIE(0, 0, 0);
+    }
+
+  }
+
+  // ie form styling
+  select.form-control option {
+    color: $gray;
+  }
+
+}
+

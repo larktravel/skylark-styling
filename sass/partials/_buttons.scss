@@ -1,0 +1,412 @@
+a.btn {
+  text-decoration: none;
+}
+
+.btn {
+  @include ease(all, .15s);
+
+  &.disable {
+  cursor: default;
+  }
+}
+
+.btn, select {
+  &:active, &:focus {
+    outline: none;
+  }
+}
+
+.btn.btn-fluid {
+  width: 100%;
+  }
+
+.btn.btn-user-choice {
+  @extend .btn.btn-fluid;
+  background: $white;
+  padding: 3px 0px 2px 0px;
+  border: 1px solid $light-gray;
+  border-radius: 2px;
+  color: $text-black;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  text-shadow: 0px 0px 1px rgba($black, .15);
+
+  &.btn-selected {
+    background: $lark-purple;
+    color: $white;
+    border-color: darken($lark-purple, 8%);
+  }
+
+  &:hover, &:active, &:focus  {
+    background: $lark-purple;
+    cursor: pointer;
+    border: 1px solid darken($lark-purple, 8%);
+    box-shadow: none;
+    color: $white;
+    text-shadow: 0px 0px 1px rgba($black, .25);
+  }
+}
+
+.btn.btn-simple {
+  @extend .btn.btn-fluid;
+  padding: 10px 0px;
+  border: 1px solid $light-gray-2;
+  border-radius: 2px;
+  text-align: center;
+  color: $text-light-black;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.btn.btn-available {
+  &:hover {
+    background: $lark-purple;
+    border: 1px solid darken($lark-purple, 8%);
+    color: $white;
+    text-shadow: 0px 0px 1px rgba($black, .25);
+  }
+
+  &:active, &:focus {
+    background: darken($lark-purple, 8%);
+  }
+}
+
+.btn.btn-action {
+  @extend .btn.btn-fluid;
+  background: $lark-purple;
+  padding: 12px 4px;
+  border: 1px solid darken($lark-purple, 8%);
+  border-radius: 2px;
+  color: $white;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  text-shadow: 0px 0px 1px rgba($black, .25);
+
+  &:hover, &:active, &:focus {
+    background-color: darken($lark-purple, 8%);
+    color: $white;
+  }
+
+  &.btn-action-alt {
+    background: rgba($gray, .4);
+    padding: 11px 4px;
+    border: 2px solid lighten($gray, 50%);
+    color: $white;
+
+    &.btn-small{
+      padding: 8px 4px;
+      border-width: 1px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    &:hover {
+      background: rgba($black, .3);
+      border-color: $white;
+      color: $white;
+    }
+  }
+}
+
+.btn.btn-action-simple {
+  @extend .btn.btn-fluid;
+  background: $white;
+  padding: 12px;
+  border: 2px solid $lark-purple;
+  border-radius: 2px;
+  color: $lark-purple;
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+
+  &:hover, &:active, &:focus {
+    border-color: $text-black;
+    color: $text-black;
+    text-shadow: 0px 0px 1px rgba($black, .25);
+  }
+}
+
+.btn{
+  span.button-content{
+    display: inline-block;
+    position: relative;
+  }
+  span.button-text{
+    display: inline-block;
+    position: relative;
+  }
+}
+
+.btn.btn-sort {
+  background: transparent;
+  opacity: 0.7;
+  margin-top: 5px;
+  border: 1px solid $light-gray-2;
+  color: $text-light-black;
+  font-size: 11px;
+  font-weight: 600;
+  font-family: $body-font;
+  text-transform: uppercase;
+  @include transition (opacity 0.25s ease-in-out);
+
+  &.active {
+    background: $white;
+    opacity: 1;
+    box-shadow: none;
+
+    &:hover {
+      color: $text-light-black;
+    }
+  }
+
+  &:hover, &:focus {
+    opacity: 1;
+    box-shadow: none;
+    color: $text-black;
+  }
+}
+
+.btn.btn-change {
+  padding: 3px 8px;
+  border: 1px solid $light-gray;
+  border-radius: 2px;
+  color: $medium-gray;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+
+  span i:before {
+    color: $medium-gray;
+  }
+
+  &:hover, &:focus, &:active {
+    border-color: $text-gray;
+    color: $text-light-black;
+
+    span i:before {
+      color: $text-light-black;
+    }
+  }
+}
+
+
+
+
+// Needs Refactoring
+
+.btn.btn-dark {
+  background: $black;
+  opacity: 0.6;
+  border: 1px solid $medium-gray;
+  color: $white;
+  font-weight: 600;
+  font-family: $body-font;
+  text-transform: uppercase;
+  @include transition (opacity 0.25s ease-in-out);
+
+  &.active {
+    opacity: 1;
+  }
+
+  &:hover {
+    opacity: 1;
+    color: $white;
+  }
+
+  &.btn-sm {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .05em;
+  }
+}
+
+.btn.btn-dim {
+  background-color: $dark-purple;
+  border: none;
+  color: lighten($lark-purple, 20%);
+  font-size: 10px;
+  font-weight: 400;
+  font-family: $body-font;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+  &:hover, &:active, &:focus {
+    background-color: darken($dark-purple, 5%);
+    color: $white;
+  }
+}
+
+.btn.btn-book-flight {
+  background-color: $pale-gray;
+  padding: 6px 20px 4px;
+  border:1px solid $lark-purple;
+  color: $lark-purple;
+  font-size: 12px;
+  font-weight: 400;
+  font-family: $body-font;
+  text-transform: uppercase;
+}
+
+table.fares tbody:hover {
+  .btn.btn-book-flight {
+    background-color: $lark-purple;
+    color: $white;
+    text-shadow: 0px 0px 1px rgba($black,0.2);
+  }
+}
+
+.btn.btn-cto {
+  background-color: $lark-purple;
+  padding: 8px 12px 4px 16px;
+  border: 2px solid $lark-purple;
+  border-radius: 3px;
+  @include box-shadow(0px 1px 1px rgba($black, 0.4));
+  color: $white;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 28px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-shadow: 0px 1px 1px rgba($black,0.2);
+
+  &:hover, &:active, &:focus {
+    background-color: darken($lark-purple, 8%);
+    border-color: darken($lark-purple, 8%);
+    color: $white;
+  }
+
+  &.btn-cto-border {
+    background: rgba($gray, .4);
+    border: 2px solid lighten($gray, 50%);
+    color: $white;
+
+    &:hover {
+      background: rgba($black, .3);
+      border-color: $white;
+      color: $white;
+    }
+  }
+}
+
+.btn.btn-hold {
+  background-color: $lark-purple;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid darken($lark-purple, 10%);
+  border-radius: 0px 0px 3px 3px;
+  color: $white;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  text-shadow: 0 0 2px rgba($black, .4);
+
+  &:hover,
+  &:active,
+  &:focus {
+    background-color: darken($lark-purple, 5%);
+    color: $white;
+  }
+
+  .small {
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 5px;
+    letter-spacing: 0.05em;
+
+    em {
+      opacity: 0.75;
+    }
+  }
+}
+
+.btn.btn-flights {
+  background-color: $light-gray;
+  width:100%;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: $white;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  text-shadow: 0px 0 1px rgba($black,0.3);
+  @include animation(fadein .4s ease-in-out);
+  @include animation-delay(.2s);
+
+  &:hover, &:active, &:focus {
+    background-color: darken($lark-purple, 5%);
+    color: $white;
+  }
+}
+
+.btn.btn-search {
+  font-size: 18px;
+}
+
+.btn.btn-search, .btn.btn-book, .btn.btn-login, .btn.btn-submit {
+  background-color: $lark-purple;
+  border: 1px solid $lark-purple;
+  color: $white;
+  font-weight: 600;
+  font-family: $body-font;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  @include ease(all, .2s);
+
+  &:hover, &:active, &:focus {
+    background-color: darken($lark-purple, 5%);
+    color: $white;
+  }
+
+  &.disabled, &[disabled] {
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 1;
+    pointer-events: none;
+    color: rgba($white,0.5);
+  }
+}
+
+.btn.btn-book-inverted {
+  background-color: $white;
+  border: none;
+  color: $lark-purple;
+  font-weight: 600;
+  font-family: $body-font;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+
+  &:hover, &:active, &:focus {
+    background-color: lighten($lark-purple, 90%);
+    color: $lark-purple;
+  }
+}
+
+.btn.btn-wide {
+  width: 100%;
+}
+
+.btn.btn-fill {
+  width: 100%;
+  height: 100%;
+  min-height: 70px;
+  border-radius: 0 0 3px 3px;
+}
+
+.btn.btn-sharp {
+  border-radius: 0px;
+}
+
+.btn.btn-top-sharp {
+  border-radius: 0;
+}

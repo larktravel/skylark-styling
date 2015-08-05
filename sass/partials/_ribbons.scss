@@ -1,0 +1,202 @@
+/* RIBBON BANNERS */
+
+.ribbon {
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  .text, .banner, a {
+    background: transparent;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    outline: 0px;
+    font-size: 100%;
+    vertical-align: baseline;
+  }
+
+  a {
+    color: $white;
+    text-decoration: none;
+  }
+
+  .banner {
+    position: relative;
+    top: 31px;
+    right: -14px;
+    width: 100px;
+    display: block;
+    float: right;
+    color: $white;
+    -webkit-font-smoothing: antialiased;
+    transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+  }
+
+  .text {
+    @include ease(all, .1s);
+    z-index: 2;
+    position: relative;
+    min-height: 18px;
+    padding: 6px 0;
+    text-align: center;
+    white-space: nowrap;
+    font-size: 11px;
+    font-weight: 600;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.20);
+    text-overflow: ellipsis;
+
+    &::before, &::after {
+      @include ease(all, .1s);
+      content: '';
+      z-index: -1;
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 30px;
+      display: block;
+    }
+
+    &::before {
+      transform: translateX(-15%) skewX(-45deg);
+      -webkit-transform: translateX(-15%) skewX(-45deg);
+      -ms-transform: translateX(-15%) skewX(-45deg);
+    }
+
+    &::after {
+      transform: translateX(15%) skewX(45deg);
+      -webkit-transform: translateX(15%) skewX(45deg);
+      -ms-transform: translateX(15%) skewX(45deg);
+    }
+  }
+
+  &.ribbon-left {
+    right: auto;
+    left: -5px;
+
+    .banner {
+      right: auto;
+      left: 1px;
+      width: 100px;
+      float: left;
+      transform: rotate(-45deg);
+      -webkit-transform: rotate(-45deg);
+      -ms-transform: rotate(-45deg);
+    }
+  }
+}
+
+.ribbon-small {
+  .banner {
+    top: 15px;
+    right: -8px;
+    width: 65px;
+
+    &::after, &::before {
+      width: 20px;
+      height: 6px;
+    }
+  }
+
+  .text {
+    min-height: 14px;
+    padding: 3px 0px;
+    font-size: 8px;
+    line-height: 14px;
+
+    &::before, &::after {
+      height: 20px;
+    }
+  }
+}
+
+.ribbon-large {
+  .banner {
+    top: 32px;
+    right: -20px;
+    width: 150px;
+
+    &::after, &::before {
+      width: 45px;
+      height: 18px;
+    }
+  }
+
+  .text {
+    min-height: 28px;
+    padding: 9px 0;
+    font-size: 18px;
+    line-height: 28px;
+
+    &::before, &::after {
+      height: 46px;
+    }
+  }
+}
+
+.ribbon {
+  .banner {
+    &::after, &::before {
+      background-color: #51a351;
+    }
+  }
+
+  .text {
+    &::after, &::before {
+      background-color: #62c462;
+    }
+  }
+}
+
+.ribbon-purple {
+  .banner {
+    &::after, &::before {
+      background-color: $lark-purple;
+    }
+  }
+
+  .text {
+    color: $white;
+
+    &::after, &::before {
+      background-color: $lark-purple;
+    }
+  }
+}
+
+.tile:hover .ribbon-purple {
+  .banner {
+    &::after, &::before {
+      background-color: $white;
+    }
+  }
+
+  .text {
+    color: $lark-purple;
+
+    &::after, &::before {
+      background-color: $white;
+    }
+  }
+}
+
+.ribbon-red {
+  .banner {
+    &::after, &::before {
+      background-color: #f2ba00;
+    }
+  }
+
+  .text {
+    color: $text-black;
+
+    &::after, &::before {
+      background-color: #ffd95e;
+    }
+  }
+}

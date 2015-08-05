@@ -1,0 +1,59 @@
+.footer {
+  background: darken($page-background, 2%);
+  z-index: 100;
+  position: relative;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  border-top: 1px solid $light-gray-2;
+  color: $medium-gray;
+
+  &:hover {
+    .container {
+      opacity: 1 !important;
+      @include ease(all, .5s);
+    }
+  }
+
+  .container {
+    opacity: 0.5;
+  }
+
+  .copyright {
+    padding-top: 15px;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .made-in {
+    height: 40px;
+  }
+
+  .made {
+    background: image-url("#{$cloudfront-url}/made-in-nyc-2x.png") no-repeat top left;
+    background-size: cover;
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: right;
+  }
+
+  &.alt-footer {
+    background: $lark-purple;
+    border-top: 1px solid rgba($white, .2);
+    text-align: left;
+    color: $text-white;
+
+    .container {
+      opacity: 0.8;
+    }
+  }
+}
+
+
+@media (max-width: 767px) {
+
+  .footer {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+}

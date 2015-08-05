@@ -1,0 +1,365 @@
+.carousel {
+  width: 100%;
+
+  &.fading {
+    .carousel-inner {
+      height: $hp_slideshow-height;
+      .item {
+        display: block;
+        position: absolute;
+        left: 0 !important;
+        opacity: 0;
+        @include transition(0.75s ease-in-out opacity);
+        &.active, &.next.left {
+          opacity: 1;
+        }
+        &.next, &.active.left {
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  .carousel-inner {
+
+    &:after {
+      @include gradient-vertical(rgba($black, .25), rgba($black, 0), 0, 50%);
+      content: '';
+      z-index: 1;
+      position: absolute;
+      top: 0px;
+      bottom: 0px;
+      right: 0px;
+      left: 0px;
+    }
+
+    .item {
+      background-position: bottom center;
+      background-size: cover;
+      width: 100%;
+      height: $slideshow-height;
+    }
+  }
+
+  .carousel-control {
+    z-index: 20;
+
+    .glyphicon-chevron-left,
+    .glyphicon-chevron-right {
+      font-size: 20px;
+      font-weight: 300;
+    }
+  }
+
+  .carousel-caption {
+    bottom: 18px;
+    left: 18px;
+    padding-bottom: 0px;
+    text-align: left;
+    font-family: $serif-font;
+
+    .avatar {
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 46px;
+      height: 46px;
+      float: left;
+      border: 2px solid $white;
+      border-radius: 50%;
+      @include box-shadow(0px 1px 1px 1px rgba($black, 0.35));
+    }
+
+    .caption {
+      width: 360px;
+      margin-top: 2px;
+      margin-left: 58px;
+      color: darken($white, 15%);
+      font-size: 13px;
+      font-weight: 400;
+      line-height: 1.2em;
+      text-indent: -4px;
+
+      em {
+        color: darken($white, 10%);
+        font-weight: 600;
+        font-style: normal;
+      }
+    }
+
+    .byline {
+      padding-left: 5px;
+      color: darken($white, 15%);
+      font-size: 10px;
+      font-weight: 600;
+      font-family: $body-font;
+      line-height: 18px;
+      text-transform: uppercase;
+
+      .title {
+        color: darken($white, 35%);
+      }
+    }
+  }
+}
+
+.carousel-indicators {
+  bottom: 0px;
+
+  li {
+    background: $white;
+    opacity: 0.5;
+    width: 10px;
+    height: 10px;
+    margin: 1px 4px;
+    border: 0px;
+
+    &.active {
+      background: $white;
+      opacity: 1.0;
+      width: 10px;
+      height: 10px;
+      margin: 1px 4px;
+      border: 0px;
+    }
+  }
+}
+
+// Property Carousel
+
+#property_slideshow {
+  height: $slideshow-height;
+  background-position: 50% 66%;
+  background-size: cover;
+
+  .carousel {
+
+    a.carousel-control {
+      cursor: pointer;
+    }
+
+    .carousel-inner {
+      height: $slideshow-height;
+      .item {
+        background-position: 50% 66%;
+      }
+      &:after {
+        @include gradient-vertical(rgba(black, 0.30), rgba($black, 0), 0, 100%);
+      }
+    }
+  }
+
+
+
+  // background-size: cover;
+  // background-repeat: no-repeat;
+
+  // .carousel
+
+  .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+    top: 46%;
+    margin-top: 5px;
+  }
+
+  .hotel-masthead {
+    z-index: 200;
+    position: fixed;
+    width: 100%;
+    text-align: center;
+  }
+
+  .copy {
+    z-index: 9;
+    position: absolute;
+    width: 100%;
+    color: $white;
+
+    h1 {
+      margin-top: 5px;
+      font-size: 58px;
+      font-weight: 400;
+      text-transform: uppercase;
+      text-shadow: 0 2px 2px rgba($black,0.3);
+    }
+
+    h3 {
+      display: inline-block;
+      margin: 5px 0px;
+      padding: 5px;
+      font-size: 17px;
+      font-style: italic;
+      font-family: $body-font;
+      letter-spacing: 0.15em;
+      text-shadow: 0 1px 1px rgba($black,0.3);
+
+      span {
+        padding-bottom: 3px;
+        font-weight: 600;
+        font-style: normal;
+      }
+    }
+  }
+
+  .hotel-title {
+    z-index: 19;
+    position: absolute;
+    top: 36vh;
+    right: 0px;
+    left: 0px;
+    text-align: center;
+    font-family: $body-font;
+    text-shadow: 0px 1px 1px $dark-gray;
+
+    h1 {
+      max-width: 72%;
+      overflow: hidden;
+      margin: 10px auto;
+      padding: 0px;
+      white-space: nowrap;
+      color: $white;
+      font-size: 58px;
+      font-weight: 400;
+      font-family: $serif-font;
+      letter-spacing: $serif-font-spacing;
+      text-transform: uppercase;
+      text-shadow: 0 2px 2px rgba($black,0.3);
+      text-overflow: ellipsis;
+    }
+
+    h3 {
+      margin: 0px;
+      padding: 0px;
+      display: inline-block;
+      font-size: 17px;
+      font-weight: 400;
+      font-family: $body-font;
+      letter-spacing: 0.15em;
+      text-shadow: 0 1px 1px rgba($black,0.3);
+      text-transform: uppercase;
+
+      span {
+        padding: 0 10px 3px;
+        font-weight: 600;
+        font-style: normal;
+      }
+    }
+  }
+
+  span {
+    &.local {
+      margin-top: 5px;
+      margin-left: -30px;
+      padding-left: 15px;
+      color: $text-white;
+      font-size: 15px;
+      font-weight: 600;
+
+      i:before {
+        color: $white;
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 991px) {
+  #property_slideshow {
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+      margin-top: 35px;
+    }
+  }
+}
+
+
+
+
+@media (max-width: 991px) {
+
+  #property_slideshow {
+    height: 70vh;
+
+    .carousel {
+      .carousel-inner {
+        .item {
+          height: 70vh;
+          min-height: 300px;
+        }
+      }
+    }
+
+    .hotel-title {
+      top: 29vh;
+
+      h1 {
+        overflow-y: hidden;
+        max-height: 132px;
+        white-space: normal;
+        font-size: 60px;
+      }
+    }
+  }
+
+  .pane.amenities-pane .info {
+    margin-top: 30px;
+  }
+}
+
+
+
+
+@media (min-width: 551px) and (max-width: 767px) {
+
+  #property_slideshow {
+    .hotel-title {
+      top: 29vh;
+
+      h3 {
+        overflow: hidden;
+        max-width: 80%;
+        white-space: nowrap;
+        font-size: 14px;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 550px) {
+
+  #property_slideshow {
+    // height: 50vh;
+
+    .hotel-title {
+      top: 35vh;
+
+      h1 {
+        overflow-y: hidden;
+        max-height: 132px;
+        white-space: normal;
+        margin-bottom: 0px;
+        color: $white;
+        font-size: 30px;
+        text-transform: none;
+      }
+
+      h3 {
+        display: none;
+      }
+
+      span.local {
+        font-size: 12px;
+        text-transform: uppercase;
+      }
+    }
+
+    .carousel-control .glyphicon-chevron-left, .carousel-control .glyphicon-chevron-right {
+      opacity: 0.5;
+      font-weight: 400;
+    }
+  }
+}
+
+
