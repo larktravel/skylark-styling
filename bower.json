@@ -1,6 +1,6 @@
 {
   "name": "skylark-styling",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "authors": [
     "Adam Singer <adam@artforge.com>"
   ],
@@ -21,6 +21,6 @@
     "url": "git://github.com/larktravel/skylark-styling.git"
   },
   "dependencies": {
-    "bootstrap-sass-official": "~3.3.3"
+    "bootstrap-sass": "~3.3.5"
   }
 }
