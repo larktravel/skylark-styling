@@ -1,0 +1,136 @@
+.modal-backdrop {
+  transition: opacity .25s linear;
+  opacity: .5;
+
+  &.in {
+    opacity: .5;
+  }
+
+  &.out {
+    opacity: 0;
+  }
+}
+
+
+.vertical-alignment-helper {
+    display:table;
+    height: 100%;
+    width: 100%;
+    pointer-events:none; /* This makes sure that we can still click outside of the modal to close it */
+}
+.vertical-align-center {
+    /* To center vertically */
+    display: table-cell;
+    vertical-align: middle;
+    pointer-events:none;
+    & > div{
+      border-radius: 3px;
+
+      width:inherit;
+      height:inherit;
+      /* To center horizontally */
+      margin: 0 auto;
+      pointer-events: all;
+    }
+}
+
+.modal-dialog {
+  border-radius: 3px;
+  overflow: hidden;
+
+
+  .modal-header {
+    background: $lark-purple;
+    border-radius: 3px 3px 0px 0px;
+    color: $white;
+
+    h2 {
+      text-align: center;
+      font-weight: 500;
+      margin: 10px;
+    }
+  }
+
+  .modal-body {
+    border-radius: 0px 0px 3px 3px;
+  }
+
+  .tag-spinner.large{
+    position: relative;
+    height:100px;
+  }
+
+  &.modal-info{
+    .modal-body {
+      background: $white;
+      color: $text-black;
+      min-height: 150px;
+      h4{
+        text-align: center;
+        color: $text-gray;
+      }
+    }
+  }
+
+  @media (max-width: $screen-xs){
+    width: 100%;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    .lark-form {
+      margin-bottom: 0;
+    }
+
+    .form-rounded {
+      border-radius: 0;
+    }
+  }
+
+  .modal-body {
+    position: relative;
+    padding: 0px;
+
+    button.close {
+      position: absolute;
+      top: 10px;
+      right: 15px;
+      z-index: 1;
+    }
+
+    .lark-form {
+      .title {
+        height: auto;
+
+        h2 {
+          margin: 30px;
+          text-align: center;
+          font-size: 22px;
+          font-weight: 600;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+@media (max-width: 420px) {
+
+  .modal-dialog {
+    .modal-body {
+      .lark-form {
+        .title h2 {
+          margin: 20px;
+          font-size: 18px;
+          line-height: 24px;
+          letter-spacing: 0em;
+        }
+      }
+    }
+  }
+}

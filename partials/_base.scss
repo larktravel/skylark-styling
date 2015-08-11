@@ -1,0 +1,259 @@
+body, html {
+  background-color: darken($page-background, 2%);
+  height: 100%;
+  min-height: 100%;
+  color: $text-white;
+  font-size: 100% !important;
+  font-family: $body-font;
+  letter-spacing: $body-font-spacing;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1000px;
+  }
+}
+
+@media (min-width: 1240px) {
+  /* line 10, /Users/tristangatsbymace/.rvm/gems/ruby-2.0.0-p451@lark_mvp/gems/bootstrap-sass-3.2.0.2/assets/stylesheets/bootstrap/_grid.scss */
+  .container {
+    width: 1170px;
+  }
+}
+
+.blur-container {
+  &.blur-on {
+    overflow-x: hidden;
+    background: rgba($black, .6);
+
+    .blur {
+      will-change: filter;
+      -webkit-filter: blur(10px) brightness(0.75);
+      -ms-filter: blur(10px) brightness(0.75);
+      -moz-filter: blur(10px) brightness(0.75);
+      -o-filter: blur(10px) brightness(0.75);
+      filter: blur(10px) brightness(0.75);
+    }
+  }
+
+  .blur {
+    @include transition(.25s ease-in);
+  }
+}
+
+.lazy-load{
+  @include ease(opacity, 1s);
+  opacity:1;
+  &.loading{
+    opacity:0;
+  // background-image:url("loading.gif") !important;
+  background-size:auto auto !important;
+  background-repeat: no-repeat !important;
+  background-position: center top;
+  background-color: #000000 !important;
+}
+}
+
+h1, h2, h3, h4, h5, p, a, span, dt, dl, dd {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  @include ease(opacity, .2s);
+
+  .wf-loading & {
+    @include opacity(0);
+    visibility: hidden;
+  }
+
+  .wf-active & {
+    @include opacity(1);
+  }
+}
+
+.relative {
+  position: relative;
+}
+
+.no-transition {
+  transition: none !important;
+}
+
+::selection {
+  background: $dark-blue !important;
+  color: $white;
+  text-shadow: none;
+}
+
+::-moz-selection {
+  background: $dark-blue !important;
+  color: $white;
+  text-shadow: none;
+}
+
+select:-moz-focusring {
+  color: transparent;
+  text-shadow: 0 0 0 $black;
+}
+
+.form-control[disabled], .form-control[readonly], fieldset[disabled] .form-control {
+  background-color: inherit;
+}
+
+select, input[type="color"][list] {
+  background-color: rgba($white,0.0);
+}
+
+*:focus {
+  outline: 0 !important;
+}
+
+.opaque {
+  opacity: 1 !important;
+}
+
+.hide {
+  visibility: hidden;
+  display: none;
+}
+
+.pane {
+  &.loading {
+    opacity: 0;
+  }
+}
+
+.loaded .pane {
+  transition: opacity 300ms ease-out;
+  -webkit-transition: opacity 300ms ease-out;
+  -moz-transition: opacity 300ms ease-out;
+  opacity: 1;
+}
+
+.container {
+  &.absolute {
+  min-height: 0px !important;
+  }
+
+  &.fill {
+  display: table;
+
+    .row {
+      height: 100%;
+      display: table-row;
+
+      & > div {
+        display: table-cell;
+        height: 100%;
+      }
+    }
+  }
+}
+
+#skrollr-body {
+  position: relative;
+  overflow: hidden;
+}
+
+main {
+  overflow-x: hidden;
+}
+
+.sliding-container {
+  position: relative;
+}
+
+.strike {
+  text-decoration: line-through;
+}
+
+.main-content {
+  padding: 115px 0px 30px;
+}
+
+.content {
+  padding: 50px 0px 50px;
+}
+
+.pane {
+  h3 {
+  margin: 0px;
+  padding: 0px 0px 40px 0px;
+  text-align: center;
+  color: $text-white;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+
+    .header-underline {
+      height: 1px;
+      width: 70px;
+      margin: 15px auto 0px auto;
+    }
+
+    &.light {
+      color: $text-white;
+
+      .header-underline {
+        background: rgba($white, .5);
+      }
+    }
+
+    &.dark {
+      color: $text-black;
+
+      .header-underline {
+        background: rgba($black, .2);
+      }
+    }
+  }
+}
+
+.vertical-center {
+  display: table;
+  table-layout: fixed;
+
+  & > span, & > .centered {
+    display: table-cell;
+    vertical-align: middle;
+  }
+}
+
+.truncate {
+  max-width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+
+@media screen and (max-width: 1023px) {
+
+  body {
+    overflow-x: hidden;
+  }
+}
+
+@media (min-width: $screen-lg) {
+  header .glyphicons.earphone {
+    opacity: 0;
+  }
+}
+
+
+@media screen and (max-width: 767px) {
+
+  .container {
+    padding: 0px;
+  }
+
+  span.hidden-xs {
+    display: none !important;
+  }
+
+  .glyphicons.earphone {
+    opacity: 1;
+  }
+}
+

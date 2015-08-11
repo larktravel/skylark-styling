@@ -1,0 +1,123 @@
+.lark-alert {
+  z-index: 200;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  overflow: hidden;
+  border-radius: 0px;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: $body-font;
+  letter-spacing: 0.03em;
+
+  #header_wrapper #header &,
+  .homepage-header & {
+    top: 50px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  &.short {
+    top: 51px;
+  }
+
+  &.soft {
+    top:120px;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 600px;
+    border-radius: 3px;
+    height:60px;
+    background: rgba($black, 0.3);
+    border:solid rgba($white, 0.5) 1px;
+    color: $text-white;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.25);
+
+    .lark-alert-content {
+      padding-top: 37px;
+      display: table-cell;
+      vertical-align: middle;
+    }
+  }
+
+  &.notice {
+    background: rgba($dark-purple, 1.0);
+    border-color: $dark-purple;
+    color: $white;
+  }
+
+  &.alert {
+    background: $no-availability-bg;
+    border: 1px solid darken($no-availability-bg, 10%);
+    color: $white;
+  }
+
+  .lark-alert-content {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 80px;
+    padding: 30px 24px 24px 24px;
+    text-align: center;
+  }
+}
+
+.lark-alert.ng-enter,
+.lark-alert.ng-leave {
+  @include ease(all, 0.5s);
+}
+
+.lark-alert.ng-enter {
+  opacity: 0;
+  height: 0px;
+}
+
+.lark-alert.ng-enter.ng-enter-active {
+  opacity: 1;
+  height: 80px;
+}
+
+.lark-alert.ng-leave {
+  height: 80px;
+}
+
+.lark-alert.ng-leave.ng-leave-active {
+  height: 0px;
+}
+
+.header-background-overlay {
+  background: rgba($lark-purple,0);
+  @include ease(background, 0.5s);
+
+  &.alert-active {
+    background: rgba($lark-purple,1);
+  }
+}
+
+.alert-fix {
+  height: 160px;
+  display: block;
+  }
+
+@media screen and (max-width: 1024px) {
+
+  .lark-alert {
+    .lark-alert-content {
+      right: 0px;
+    }
+  }
+
+}
+
+@media (max-width: 767px) {
+  .lark-alert {
+    font-size: 14px;
+
+    .lark-alert-content {
+      padding-top: 30px;
+    }
+  }
+}

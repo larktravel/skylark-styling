@@ -1,0 +1,61 @@
+.container.debug{
+  position: relative;
+  background:rgba(blue,0.25);
+  .row{
+    background:yellow;
+    & > div{
+      background:pink;
+    }
+  }
+  color: black;
+}
+
+.debug{
+
+  position: fixed;
+  top:110px;
+  left:10px;
+  z-index: 201;
+  color: $text-black;
+
+  .debug-pricing{
+
+    max-width:1400px;
+    max-height:500px;
+    overflow: scroll;
+    resize: both;
+    @include box-shadow(5px 5px 5px 0 rgba($black, 0.25));
+
+    .subdue{
+      // opacity:0.25;
+      color: rgba($black, 0.25);
+    }
+  }
+}
+
+
+.table.table-pricing{
+  margin:0px;
+  color: $text-black;
+  font-family: monospace;
+  font-size:11px;
+  background: $white;
+  tr.warning{
+    background: rgba(255,255,0,0.25);
+  }
+  td, th{
+    color: $text-black;
+    &.center{
+      text-align: center;
+    }
+    &.right{
+      text-align: right;
+    }
+  }
+  td{
+    max-width: 120px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+  }
+}

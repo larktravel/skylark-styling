@@ -1,0 +1,23 @@
+a {
+  color: $black;
+  text-decoration: none;
+  
+  &:hover, 
+  &:active {
+    color: $lark-purple;
+    text-decoration: underline;
+  }
+}
+
+p:last-child {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.strike {
+  text-decoration: line-through !important;
+}
+
+em {
+  font-style: normal;
+}
