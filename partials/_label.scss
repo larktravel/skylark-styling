@@ -1,0 +1,83 @@
+.label-300, .label-500{
+ display: inline-block;
+ max-width: 300px;
+ overflow: hidden;
+ text-overflow: ellipsis;
+ text-align: left;
+}
+.label-500{
+ max-width: 500px;
+}
+
+.label-waiting{
+ display: inline-block;
+ min-width: 60px;
+ background-color: $gray;
+}
+
+.label-shell{
+ display: inline-block;
+ min-width: 60px;
+ background-color: #d9534f ;
+}
+.label-air-held{
+ display: inline-block;
+ min-width: 60px;
+ background-color: #f0ad4e ;
+}
+
+.label-all-held, .label-hold{
+ display: inline-block;
+ min-width: 60px;
+ background-color: #5cb85c ;
+}
+
+.label-outline {
+ font-family: monospace;
+ color: $lark-purple;
+ background-color: $white;
+ padding: 0.2em 0.5em;
+ border: 0.1em solid $lark-purple;
+ font-size:90%;
+ &.label-waiting{
+   color: $gray;
+   border-color: $gray;
+   display: inline-block;
+   width: 75px;
+ }
+
+ &.label-shell{
+   display: inline-block;
+   width: 75px;
+   color: #d9534f ;
+   border-color: #d9534f ;
+ }
+ &.label-air-held{
+   display: inline-block;
+   width: 75px;
+   color: #f0ad4e ;
+   border-color: #f0ad4e ;
+ }
+
+ &.label-all-held, &.label-hold{
+   display: inline-block;
+   width: 75px;
+   color: #5cb85c ;
+   border-color: #5cb85c ;
+ }
+}
+
+.label-intent-hold, .label-intent-book{
+ text-transform: uppercase;
+ display: inline-block;
+ min-width: 60px;
+ color: $lark-purple;
+ border-color: $lark-purple;
+ background-color: $white;
+}
+
+.label-intent-book{
+ color: $white;
+ border-color: $lark-purple;
+ background-color: $lark-purple;
+}
