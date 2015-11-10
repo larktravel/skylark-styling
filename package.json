@@ -1,0 +1,27 @@
+{
+  "name": "skylark-styling",
+  "version": "1.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-connect": "^2.2.0",
+    "gulp-plumber": "^1.0.1",
+    "gulp-sass": "^2.1.0",
+    "run-sequence": "^1.1.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/larktravel/skylark-styling.git"
+  },
+  "author": "Kyle Burke <k23burke@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/larktravel/skylark-styling/issues"
+  },
+  "homepage": "https://github.com/larktravel/skylark-styling#readme"
+}

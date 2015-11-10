@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <base href="/" />
+    <title>Skylark Style Guide</title>
+    <link rel="stylesheet" type="text/css" href="/stylesheets/lark.css" />
+    <!-- TYPEKIT LOADING SCRIPT -->
+    <script>
+      (function(d) {
+        var config = {
+          kitId: 'dop7xzc',
+          scriptTimeout: 3000
+        },
+        h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='//use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+      })(document);
+    </script>
+    <!-- /TYPEKIT LOADING SCRIPT -->
+</head>
+<!-- REPLACING CONSTANTS -->
+<body class="skylark-app">
+  <style>
+    .pane {
+      background-color:white;
+      color:black;
+    }
+  </style>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12 pane">
+        <h1>Foundations</h1>
+        <h5>Font Family</h5>
+        <pre>font-family: proxima-nova, arial, sans-serif;</pre>
+        <p>Website uses <pre>.pane</pre> class to split by information sections</p>
+
+
+        <h1>Headers</h1>
+        <p>Don't use h1's</p>
+        <h3>H3 Standard</h3>
+        <h3 class="dark">H3 Dark</h3>
+        <pre>&lt;h3 class=&quot;dark&quot;&gt;H3 Dark&lt;/h3&gt;</pre>
+
+
+
+      </div>
+
+
+
+      <div class="col-xs-12 pane">
+        <h1>Buttons</h1>
+        <a class="btn btn-action">Button</a>
+        <pre>&lt;a class=&quot;btn btn-action&quot;&gt;Button&lt;/a&gt;</pre>
+        <a class="btn btn-user-choice">Select</a>
+        <pre>&lt;a class=&quot;btn btn-user-choice&quot;&gt;Button&lt;/a&gt;</pre>
+        <a class="btn btn-change">Change</a>
+        <pre>&lt;a class=&quot;btn btn-change&quot;&gt;Button&lt;/a&gt;</pre>
+        <a class="btn btn-action-simple">Advice</a>
+        <pre>&lt;a class=&quot;btn btn-action-simple&quot;&gt;Button&lt;/a&gt;</pre>
+        <a class="btn btn-action btn-action-alt btn-small">« Back to Results</a>
+        <pre>&lt;a class=&quot;btn btn-action btn-action-alt btn-small&quot;&gt;&laquo; Button&lt;/a&gt;</pre>
+      </div>
+
+      <div class="col-xs-12">
+        <h1>Icons</h1>
+        <div><span class="glyphicons cogwheel"><i></i></span>Cogwheel</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
