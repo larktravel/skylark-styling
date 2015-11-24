@@ -1,0 +1,122 @@
+#style_guide_only {
+  .pane {
+    background-color:white;
+    color:black;
+  }
+  .color-color {
+    color: $white;
+    text-shadow: 0px 0px 3px #000;
+  }
+  .color-name, .color-color {
+    width: 50%;
+    display:inline-block;
+    padding:20px;
+    text-align: center;
+    float: left;
+
+    &.lark-purple {
+      background-color: $lark-purple;
+    }
+    &.dark-purple {
+      background-color: $dark-purple;
+    }
+    &.light-purple {
+      background-color: $light-purple;
+    }
+    &.page-background {
+      background-color: $page-background;
+    }
+    &.black {
+      background-color: $black;
+    }
+    &.text-black {
+      background-color: $text-black;
+    }
+    &.text-light-black {
+      background-color: $text-light-black;
+    }
+    &.text-gray {
+      background-color: $text-gray;
+    }
+    &.medium-gray {
+      background-color: $medium-gray;
+    }
+    &.light-gray {
+      background-color: $light-gray;
+    }
+    &.border-color {
+      background-color: $border-color;
+    }
+    &.light-gray-2 {
+      background-color: $light-gray-2;
+    }
+    &.text-white {
+      background-color: $text-white;
+    }
+    &.messaging-background {
+      background-color: $messaging-background;
+    }
+    &.white {
+      background-color: $white;
+    }
+    &.pale-gray {
+      background-color: $pale-gray;
+    }
+    &.lightest-gray {
+      background-color: $lightest-gray;
+    }
+    &.dim-gray {
+      background-color: $dim-gray;
+    }
+    &.gray {
+      background-color: $gray;
+    }
+    &.dark-gray {
+      background-color: $dark-gray;
+    }
+    &.lark-gray {
+      background-color: $lark-gray;
+    }
+    &.light-border-color {
+      background-color: $light-border-color;
+    }
+    &.border-color-dark {
+      background-color: $border-color-dark;
+    }
+    &.dark-blue {
+      background-color: $dark-blue;
+    }
+    &.pos-green {
+      background-color: $pos-green;
+    }
+    &.neg-red {
+      background-color: $neg-red;
+    }
+    &.caution-yellow {
+      background-color: $caution-yellow;
+    }
+    &.active-blue {
+      background-color: $active-blue;
+    }
+    &.link-blue {
+      background-color: $link-blue;
+    }
+    &.error-background {
+      background-color: $error-background;
+    }
+    &.error-color {
+      background-color: $error-color;
+    }
+    &.no-availability-bg {
+      background-color: $no-availability-bg;
+    }
+  }
+  .spinner-container {
+    padding: 20px 0px;
+    position:relative;
+    pre {
+      padding: 20px 9.5px;
+      margin:0px;
+    }
+  }
+}

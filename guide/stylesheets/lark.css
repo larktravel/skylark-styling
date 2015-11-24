@@ -7869,6 +7869,77 @@ a.popover-indicator {
   .ribbon-red .text::after, .ribbon-red .text::before {
     background-color: #ffd95e; }
 
+.label-300, .label-500 {
+  display: inline-block;
+  max-width: 300px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left; }
+
+.label-500 {
+  max-width: 500px; }
+
+.label-waiting {
+  display: inline-block;
+  min-width: 60px;
+  background-color: #666666; }
+
+.label-shell {
+  display: inline-block;
+  min-width: 60px;
+  background-color: #d9534f; }
+
+.label-air-held {
+  display: inline-block;
+  min-width: 60px;
+  background-color: #f0ad4e; }
+
+.label-all-held, .label-hold {
+  display: inline-block;
+  min-width: 60px;
+  background-color: #5cb85c; }
+
+.label-outline {
+  font-family: monospace;
+  color: #8a2ed9;
+  background-color: #FFFFFF;
+  padding: 0.2em 0.5em;
+  border: 0.1em solid #8a2ed9;
+  font-size: 90%; }
+  .label-outline.label-waiting {
+    color: #666666;
+    border-color: #666666;
+    display: inline-block;
+    width: 75px; }
+  .label-outline.label-shell {
+    display: inline-block;
+    width: 75px;
+    color: #d9534f;
+    border-color: #d9534f; }
+  .label-outline.label-air-held {
+    display: inline-block;
+    width: 75px;
+    color: #f0ad4e;
+    border-color: #f0ad4e; }
+  .label-outline.label-all-held, .label-outline.label-hold {
+    display: inline-block;
+    width: 75px;
+    color: #5cb85c;
+    border-color: #5cb85c; }
+
+.label-intent-hold, .label-intent-book {
+  text-transform: uppercase;
+  display: inline-block;
+  min-width: 60px;
+  color: #8a2ed9;
+  border-color: #8a2ed9;
+  background-color: #FFFFFF; }
+
+.label-intent-book {
+  color: #FFFFFF;
+  border-color: #8a2ed9;
+  background-color: #8a2ed9; }
+
 .header {
   z-index: 200;
   position: fixed;
@@ -7975,6 +8046,92 @@ a.popover-indicator {
   .footer {
     padding-right: 15px;
     padding-left: 15px; } }
+
+#style_guide_only .pane {
+  background-color: white;
+  color: black; }
+
+#style_guide_only .color-color {
+  color: #FFFFFF;
+  text-shadow: 0px 0px 3px #000; }
+
+#style_guide_only .color-name, #style_guide_only .color-color {
+  width: 50%;
+  display: inline-block;
+  padding: 20px;
+  text-align: center;
+  float: left; }
+  #style_guide_only .color-name.lark-purple, #style_guide_only .color-color.lark-purple {
+    background-color: #8a2ed9; }
+  #style_guide_only .color-name.dark-purple, #style_guide_only .color-color.dark-purple {
+    background-color: #0f0322; }
+  #style_guide_only .color-name.light-purple, #style_guide_only .color-color.light-purple {
+    background-color: #D3BBE7; }
+  #style_guide_only .color-name.page-background, #style_guide_only .color-color.page-background {
+    background-color: #F4F5F7; }
+  #style_guide_only .color-name.black, #style_guide_only .color-color.black {
+    background-color: #000000; }
+  #style_guide_only .color-name.text-black, #style_guide_only .color-color.text-black {
+    background-color: #3D3D3D; }
+  #style_guide_only .color-name.text-light-black, #style_guide_only .color-color.text-light-black {
+    background-color: #5A5A5A; }
+  #style_guide_only .color-name.text-gray, #style_guide_only .color-color.text-gray {
+    background-color: #737373; }
+  #style_guide_only .color-name.medium-gray, #style_guide_only .color-color.medium-gray {
+    background-color: #999999; }
+  #style_guide_only .color-name.light-gray, #style_guide_only .color-color.light-gray {
+    background-color: #AAAAAA; }
+  #style_guide_only .color-name.border-color, #style_guide_only .color-color.border-color {
+    background-color: #CCCCCC; }
+  #style_guide_only .color-name.light-gray-2, #style_guide_only .color-color.light-gray-2 {
+    background-color: #D9D9D9; }
+  #style_guide_only .color-name.text-white, #style_guide_only .color-color.text-white {
+    background-color: #EEEEEE; }
+  #style_guide_only .color-name.messaging-background, #style_guide_only .color-color.messaging-background {
+    background-color: #F5F5F5; }
+  #style_guide_only .color-name.white, #style_guide_only .color-color.white {
+    background-color: #FFFFFF; }
+  #style_guide_only .color-name.pale-gray, #style_guide_only .color-color.pale-gray {
+    background-color: #FAFAFA; }
+  #style_guide_only .color-name.lightest-gray, #style_guide_only .color-color.lightest-gray {
+    background-color: #EEEEEE; }
+  #style_guide_only .color-name.dim-gray, #style_guide_only .color-color.dim-gray {
+    background-color: #424242; }
+  #style_guide_only .color-name.gray, #style_guide_only .color-color.gray {
+    background-color: #666666; }
+  #style_guide_only .color-name.dark-gray, #style_guide_only .color-color.dark-gray {
+    background-color: #2D2D2D; }
+  #style_guide_only .color-name.lark-gray, #style_guide_only .color-color.lark-gray {
+    background-color: #737373; }
+  #style_guide_only .color-name.light-border-color, #style_guide_only .color-color.light-border-color {
+    background-color: #DDDDDD; }
+  #style_guide_only .color-name.border-color-dark, #style_guide_only .color-color.border-color-dark {
+    background-color: #424242; }
+  #style_guide_only .color-name.dark-blue, #style_guide_only .color-color.dark-blue {
+    background-color: #095197; }
+  #style_guide_only .color-name.pos-green, #style_guide_only .color-color.pos-green {
+    background-color: #57a55c; }
+  #style_guide_only .color-name.neg-red, #style_guide_only .color-color.neg-red {
+    background-color: #f55e4e; }
+  #style_guide_only .color-name.caution-yellow, #style_guide_only .color-color.caution-yellow {
+    background-color: #ffea00; }
+  #style_guide_only .color-name.active-blue, #style_guide_only .color-color.active-blue {
+    background-color: #2BAFFF; }
+  #style_guide_only .color-name.link-blue, #style_guide_only .color-color.link-blue {
+    background-color: #428BCA; }
+  #style_guide_only .color-name.error-background, #style_guide_only .color-color.error-background {
+    background-color: #f2dede; }
+  #style_guide_only .color-name.error-color, #style_guide_only .color-color.error-color {
+    background-color: #a94442; }
+  #style_guide_only .color-name.no-availability-bg, #style_guide_only .color-color.no-availability-bg {
+    background-color: #e3545b; }
+
+#style_guide_only .spinner-container {
+  padding: 20px 0px;
+  position: relative; }
+  #style_guide_only .spinner-container pre {
+    padding: 20px 9.5px;
+    margin: 0px; }
 
 /*!
  *

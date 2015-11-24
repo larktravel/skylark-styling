@@ -18,13 +18,7 @@
 </head>
 <!-- REPLACING CONSTANTS -->
 <body class="skylark-app">
-  <style>
-    .pane {
-      background-color:white;
-      color:black;
-    }
-  </style>
-  <div class="container">
+  <div class="container" id="style_guide_only">
     <div class="row">
       <div class="col-xs-12 pane">
         <h1>Foundations</h1>
@@ -36,10 +30,11 @@
         <h1>Headers</h1>
         <p>Don't use h1's</p>
         <h3>H3 Standard</h3>
-        <h3 class="dark">H3 Dark</h3>
-        <pre>&lt;h3 class=&quot;dark&quot;&gt;H3 Dark&lt;/h3&gt;</pre>
+        <h3 class="dark">H3.dark</h3>
 
-
+        <h1>Horizontal Rules</h1>
+        <div class="header-underline">NOT WORKING!!!</div>
+        <pre>&lt;div class=&quot;header-underline&quot;&gt;&lt;/div&gt;</pre>
 
       </div>
 
@@ -50,19 +45,394 @@
         <a class="btn btn-action">Button</a>
         <pre>&lt;a class=&quot;btn btn-action&quot;&gt;Button&lt;/a&gt;</pre>
         <a class="btn btn-user-choice">Select</a>
-        <pre>&lt;a class=&quot;btn btn-user-choice&quot;&gt;Button&lt;/a&gt;</pre>
+        <pre>&lt;a class=&quot;btn btn-user-choice&quot;&gt;Select&lt;/a&gt;</pre>
         <a class="btn btn-change">Change</a>
-        <pre>&lt;a class=&quot;btn btn-change&quot;&gt;Button&lt;/a&gt;</pre>
+        <pre>&lt;a class=&quot;btn btn-change&quot;&gt;Change&lt;/a&gt;</pre>
         <a class="btn btn-action-simple">Advice</a>
-        <pre>&lt;a class=&quot;btn btn-action-simple&quot;&gt;Button&lt;/a&gt;</pre>
+        <pre>&lt;a class=&quot;btn btn-action-simple&quot;&gt;Advice&lt;/a&gt;</pre>
         <a class="btn btn-action btn-action-alt btn-small">« Back to Results</a>
-        <pre>&lt;a class=&quot;btn btn-action btn-action-alt btn-small&quot;&gt;&laquo; Button&lt;/a&gt;</pre>
+        <pre>&lt;a class=&quot;btn btn-action btn-action-alt btn-small&quot;&gt;&laquo; Back to Results&lt;/a&gt;</pre>
       </div>
 
-      <div class="col-xs-12">
+      <div class="col-xs-12 pane">
         <h1>Icons</h1>
+        <div><span class="glyphicons moon"><i></i></span>Moon/Red Eye</div>
         <div><span class="glyphicons cogwheel"><i></i></span>Cogwheel</div>
+
+        <h1>Booking Labels</h1>
+          <span class="label label-all-held">all-held</span>
+          <span class="label label-outline label-all-held">all-held</span>
+          <pre>&lt;span class=&quot;label label-all-held&quot;&gt;all-held&lt;/span&gt;
+&lt;span class=&quot;label label-outline label-all-held&quot;&gt;all-held&lt;/span&gt;</pre>
+          <span class="label label-air-held">air-held</span>
+          <span class="label label-outline label-air-held">air-held</span>
+          <pre>&lt;span class=&quot;label label-air-held&quot;&gt;air-held&lt;/span&gt;
+&lt;span class=&quot;label label-outline label-air-held&quot;&gt;air-held&lt;/span&gt;</pre>
+          <span class="label label-shell">shell</span>
+          <span class="label label-outline label-shell">shell</span>
+          <pre>&lt;span class=&quot;label label-shell&quot;&gt;shell&lt;/span&gt;
+&lt;span class=&quot;label label-outline label-shell&quot;&gt;shell&lt;/span&gt;</pre>
       </div>
+
+
+
+      <div class="col-xs-12 pane">
+        <h1>Loading Spinner</h1>
+        <div class="spinner-container">
+          <div class="tag-spinner lark getting-events"></div>
+          <pre>&lt;div class=\&quot;tag-spinner lark getting-events\&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+        <div class="spinner-container">
+          <div class="tag-spinner small lark getting-events"></div>
+          <pre>&lt;div class=\&quot;tag-spinner lark small getting-events\&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+        <div class="spinner-container">
+          <div class="tag-spinner large lark getting-events"></div>
+          <pre>&lt;div class=\&quot;tag-spinner large lark getting-events\&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+        <div class="spinner-container">
+          <div class="tag-spinner simple lark getting-events"></div>
+          <pre>&lt;div class=\&quot;tag-spinner simple lark getting-events\&quot;&gt;&lt;/div&gt;</pre>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 pane">
+        <h1>Colors</h1>
+        <div>
+          <div class="color-name">$lark-purple</div>
+          <div class="color-color lark-purple">#8a2ed9</div>
+        </div>
+        <div>
+          <div class="color-name">$dark-purple</div>
+          <div class="color-color dark-purple">#0f0322</div>
+        </div>
+        <div>
+          <div class="color-name">$light-purple</div>
+          <div class="color-color light-purple">#D3BBE7</div>
+        </div>
+        <div>
+          <div class="color-name">$page-background</div>
+          <div class="color-color page-background">#F4F5F7</div>
+        </div>
+        <div>
+          <div class="color-name">$black</div>
+          <div class="color-color black">#000000</div>
+        </div>
+        <div>
+          <div class="color-name">$text-black</div>
+          <div class="color-color text-black">#3D3D3D</div>
+        </div>
+        <div>
+          <div class="color-name">$text-light-black</div>
+          <div class="color-color text-light-black">#5A5A5A</div>
+        </div>
+        <div>
+          <div class="color-name">$text-gray</div>
+          <div class="color-color text-gray">#737373</div>
+        </div>
+        <div>
+          <div class="color-name">$medium-gray</div>
+          <div class="color-color medium-gray">#999999</div>
+        </div>
+        <div>
+          <div class="color-name">$light-gray</div>
+          <div class="color-color light-gray">#AAAAAA</div>
+        </div>
+        <div>
+          <div class="color-name">$border-color</div>
+          <div class="color-color border-color">#CCCCCC</div>
+        </div>
+        <div>
+          <div class="color-name">$light-gray-2</div>
+          <div class="color-color light-gray-2">#D9D9D9</div>
+        </div>
+        <div>
+          <div class="color-name">$text-white</div>
+          <div class="color-color text-white">#EEEEEE</div>
+        </div>
+        <div>
+          <div class="color-name">$messaging-background</div>
+          <div class="color-color messaging-background">#F5F5F5</div>
+        </div>
+        <div>
+          <div class="color-name">$white</div>
+          <div class="color-color white">#FFFFFF</div>
+        </div>
+        <div>
+          <div class="color-name">$pale-gray</div>
+          <div class="color-color pale-gray">#FAFAFA</div>
+        </div>
+        <div>
+          <div class="color-name">$lightest-gray</div>
+          <div class="color-color lightest-gray">#EEEEEE</div>
+        </div>
+        <div>
+          <div class="color-name">$dim-gray</div>
+          <div class="color-color dim-gray">#424242</div>
+        </div>
+        <div>
+          <div class="color-name">$gray</div>
+          <div class="color-color gray">#666666</div>
+        </div>
+        <div>
+          <div class="color-name">$dark-gray</div>
+          <div class="color-color dark-gray">#2D2D2D</div>
+        </div>
+        <div>
+          <div class="color-name">$lark-gray</div>
+          <div class="color-color lark-gray">#737373</div>
+        </div>
+        <div>
+          <div class="color-name">$light-border-color</div>
+          <div class="color-color light-border-color">#DDDDDD</div>
+        </div>
+        <div>
+          <div class="color-name">$border-color-dark</div>
+          <div class="color-color border-color-dark">#424242</div>
+        </div>
+        <div>
+          <div class="color-name">$dark-blue</div>
+          <div class="color-color dark-blue">#095197</div>
+        </div>
+        <div>
+          <div class="color-name">$pos-green</div>
+          <div class="color-color pos-green">#57a55c</div>
+        </div>
+        <div>
+          <div class="color-name">$neg-red</div>
+          <div class="color-color neg-red">#f55e4e</div>
+        </div>
+        <div>
+          <div class="color-name">$caution-yellow</div>
+          <div class="color-color caution-yellow">#ffea00</div>
+        </div>
+        <div>
+          <div class="color-name">$active-blue</div>
+          <div class="color-color active-blue">#2BAFFF</div>
+        </div>
+        <div>
+          <div class="color-name">$link-blue</div>
+          <div class="color-color link-blue">#428BCA</div>
+        </div>
+        <div>
+          <div class="color-name">$error-background</div>
+          <div class="color-color error-background">#f2dede</div>
+        </div>
+        <div>
+          <div class="color-name">$error-color</div>
+          <div class="color-color error-color">#a94442</div>
+        </div>
+        <div>
+          <div class="color-name">$no-availability-bg</div>
+          <div class="color-color no-availability-bg">#e3545b</div>
+        </div>
+      </div>
+
+
+      <div class="col-xs-12 pane">
+        <h1>Forms</h1>
+
+        <form name="form" class="lark-form form-rounded">
+          <div class="row">
+            <div class="control-group col-xs-12">
+              <h2>Example Form</h2>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="control-group col-xs-6">
+              <label class="control-label" for="first">Half Length</label>
+              <div class="controls">
+                <input type="email" class="form-control" name="first" placeholder="First" required="">
+              </div>
+              <div class="error-container">
+                <small class="error">Must be a valid email address</small>
+              </div>
+            </div>
+            <div class="control-group col-xs-6">
+              <label class="control-label" for="second">Half Length</label>
+              <div class="controls">
+                <input type="text" class="form-control" name="second" placeholder="Second">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="control-group col-xs-12">
+              <label class="control-label" for="full_length">Full Length</label>
+              <div class="controls">
+                <input type="text" class="form-control" name="full_length" placeholder="Full Length" required="">
+              </div>
+              <div class="error-container">
+                <small class="error">Required</small>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="control-group col-xs-6">
+              <label class="control-label" for="half">Half</label>
+              <div class="controls">
+                <input type="text" class="form-control" name="half" placeholder="Half">
+              </div>
+            </div>
+            <div class="control-group col-xs-3">
+              <label class="control-label" for="quarter">Quarter</label>
+              <div class="controls">
+                <select name="quarter" class="form-control">
+                  <option value="" class="" selected="selected">Select Option</option>
+                  <option label="One" value="One">One</option>
+                  <option label="Two" value="Two">Two</option>
+                </select>
+              </div>
+            </div>
+            <div class="control-group col-xs-3">
+              <label class="control-label" for="quarter_two">Quarter</label>
+              <div class="controls">
+                <input type="text" class="form-control" name="quarter_two" placeholder="Another Quarter">
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="control-group col-xs-12">
+              <button type="submit" class="btn btn-submit btn-fill btn-sharp">
+                <span class="button-content">
+                  <div class="button-spinner small simple"></div>
+                  <span class="button-text">Submit</span>
+                </span>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <pre>
+&lt;form name=&quot;form&quot; class=&quot;lark-form form-rounded&quot;&gt;
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;control-group col-xs-12&quot;&gt;
+      &lt;h2&gt;Example Form&lt;/h2&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;control-group col-xs-6&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;first&quot;&gt;Half Length&lt;/label&gt;
+      &lt;div class=&quot;controls&quot;&gt;
+        &lt;input type=&quot;email&quot; class=&quot;form-control&quot; name=&quot;first&quot; placeholder=&quot;First&quot; required=&quot;&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;error-container&quot;&gt;
+        &lt;small class=&quot;error&quot;&gt;Must be a valid email address&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;control-group col-xs-6&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;second&quot;&gt;Half Length&lt;/label&gt;
+      &lt;div class=&quot;controls&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;second&quot; placeholder=&quot;Second&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;control-group col-xs-12&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;full_length&quot;&gt;Full Length&lt;/label&gt;
+      &lt;div class=&quot;controls&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;full_length&quot; placeholder=&quot;Full Length&quot; required=&quot;&quot;&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;error-container&quot;&gt;
+        &lt;small class=&quot;error&quot;&gt;Required&lt;/small&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;control-group col-xs-6&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;half&quot;&gt;Half&lt;/label&gt;
+      &lt;div class=&quot;controls&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;half&quot; placeholder=&quot;Half&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;control-group col-xs-3&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;quarter&quot;&gt;Quarter&lt;/label&gt;
+      &lt;div class=&quot;controls&quot;&gt;
+        &lt;select name=&quot;quarter&quot; class=&quot;form-control&quot;&gt;
+          &lt;option value=&quot;&quot; class=&quot;&quot; selected=&quot;selected&quot;&gt;Select Option&lt;/option&gt;
+          &lt;option label=&quot;One&quot; value=&quot;One&quot;&gt;One&lt;/option&gt;
+          &lt;option label=&quot;Two&quot; value=&quot;Two&quot;&gt;Two&lt;/option&gt;
+        &lt;/select&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    &lt;div class=&quot;control-group col-xs-3&quot;&gt;
+      &lt;label class=&quot;control-label&quot; for=&quot;quarter_two&quot;&gt;Quarter&lt;/label&gt;
+      &lt;div class=&quot;controls&quot;&gt;
+        &lt;input type=&quot;text&quot; class=&quot;form-control&quot; name=&quot;quarter_two&quot; placeholder=&quot;Another Quarter&quot;&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+
+  &lt;div class=&quot;row&quot;&gt;
+    &lt;div class=&quot;control-group col-xs-12&quot;&gt;
+      &lt;button type=&quot;submit&quot; class=&quot;btn btn-submit btn-fill btn-sharp&quot;&gt;
+        &lt;span class=&quot;button-content&quot;&gt;
+          &lt;div class=&quot;button-spinner small simple&quot;&gt;&lt;/div&gt;
+          &lt;span class=&quot;button-text&quot;&gt;Submit&lt;/span&gt;
+        &lt;/span&gt;
+      &lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;</pre>
+      </div>
+
+
+
+
+      <div class="col-xs-12 pane">
+        <h1>DASHBOARD MODULE</h1>
+        <div class="dashboard-module">
+          <div class="container-fluid heading">
+            <h4>Customer Details <a href="" class="btn btn-skylark" ng-click="openUserFormModal()">Edit</a></h4>
+          </div>
+          <div class="container-fluid">
+            <div class="row">
+              <div class="col-xs-12">
+                <b><a href="" class="ng-binding">Adam Singer</a></b>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-xs-6">
+                <div class="ng-binding">123 Waverly Place</div>
+              <div ng-show="user.address_2" class="ng-binding" style="">Apartment 2A</div>
+              <div class="ng-binding">New York, NY 10011</div>
+            </div>
+            <div class="col-xs-6">
+              <div class="ng-binding">Email: adam@larktravel.com</div>
+              <div class="ng-binding">Phone: (646) 479-7955</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     </div>
   </div>
 </body>
